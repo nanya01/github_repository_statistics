@@ -1,6 +1,6 @@
 # GITHUB REPOSITORY STATISTICS
 
-The **GitHub Repository Statistics** tool is a Python-based solution designed to provide in-depth analysis of GitHub repositories. It efficiently gathers and presents key repository metrics, making it an invaluable resource for evaluating repository activity and engagement.
+The **GitHub Repository Statistics** tool is a Python-based solution designed to provide in-depth analysis of GitHub repositories. It efficiently gathers and presents key repository metrics, making it an invaluable resource for evaluating repository activity and engagement using the (Github Api)[https://docs.github.com].
 
 This tool offers comprehensive insights by calculating the total and median counts of essential repository elements, including:
 
