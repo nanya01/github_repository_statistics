@@ -23,8 +23,28 @@ This tool offers comprehensive insights by calculating the total and median coun
 
 ### Prerequisites
 
+
 - Python 3.8 or higher.
 
+### Clone the Repository
 
+```
+git clone [https://github.com/akintunero/network-config-checker.git](https://github.com/nanya01/github_repository_statistics.git)
+```
+
+Create a Virtual Environment (Recommended)
+```
+python -m venv venv
+
+source venv/bin/activate  # For macOS/Linux
+
+venv\Scripts\activate     # For Windows
+```
+
+Install all dependencies using:
+
+```
+pip install -r requirements.txt
+```
 
 
