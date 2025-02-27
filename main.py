@@ -347,5 +347,6 @@ def get_code_lines_per_language(pdf, repos, username):
 
 
 if __name__=='__main__':
-   get_user_repos("kaggle")
+   username = input("Enter Github Username: ").strip()
+   get_user_repos(username)
    
