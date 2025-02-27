@@ -41,7 +41,6 @@ def get_user_repos(username):
         #print(f"Length {len(response.json())}")
         repos = response.json()
         
-
     get_total_forks(pdf,repos)
     get_total_stars(pdf,repos,username)
     get_total_commits(pdf,repos,username)
@@ -51,6 +50,7 @@ def get_user_repos(username):
     get_total_contributors(pdf, repos, username)
     get_total_environments(pdf, repos, username)
     get_total_tags(pdf, repos, username)
+    get_code_lines_per_language(pdf,repos,username)
     pdf.output("github_stats.pdf")
 
 
@@ -320,6 +320,30 @@ def get_total_tags(pdf, repos, username):
 
     add_text(pdf, data, total_tags, median)
     print(f"Total tags: {total_tags}, Median tags: {median}")
+
+def get_code_lines_per_language(pdf, repos, username):
+    language_stats = {}
+
+    for repo in repos:
+        url = f"{BASE_URL}/repos/{username}/{repo['name']}/languages"
+        response = requests.get(url, headers=getHeaders())
+
+        if response.status_code == 200:
+            languages = response.json()
+            
+
+            for lang, lines in languages.items():
+                if lang not in language_stats:
+                    language_stats[lang] = []
+                language_stats[lang].append(lines)
+
+    
+    for lang, lines_list in language_stats.items():
+        total = sum(lines_list)
+        median = statistics.median(lines_list) if lines_list else 0
+        data = lang 
+        add_text(pdf,data, total,median)
+        
 
 
 if __name__=='__main__':
