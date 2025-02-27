@@ -105,9 +105,9 @@ def get_total_commits(pdf, repos, username):
                 break
 
             commits = response.json()
-            commit_len = len(commits)  # Store the length of commits in a variable
+            commit_len = len(commits)  
 
-            if commit_len == 0:  # Exit the loop early if no commits are found
+            if commit_len == 0:  
                 break
 
             repo_commits += commit_len
