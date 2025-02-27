@@ -47,4 +47,42 @@ Install all dependencies using:
 pip install -r requirements.txt
 ```
 
+Generate Github Personal Token (PAT)
+
+To generate Github Personal token Click on [Github Apps](https://github.com/settings/personal-access-tokens)
+
+1 Go to GitHub Token Settings:
+-  GitHub Personal Access Tokens
+
+2️ Click "Generate new token" (or "Generate new token (classic)").
+
+3️ Select "All Repositories".
+
+4️ Grant the following permissions (at minimum):
+   -  Read access to administration
+   - Read access to code
+   - Read access to metadata
+     
+5️ Click "Generate token" and copy it immediately.
+
+⚠️ You won’t be able to see it again after you leave the page!
+
+6️ Create a .env file in the project directory and paste the token.
+
+
+---
+
+## Usages
+Use the command-line to run the program
+```
+python main.py
+```
+
+Output Example
+
+PDF Report: github_stats.pdf
+
+
+
+---
 
