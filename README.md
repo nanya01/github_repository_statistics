@@ -29,7 +29,7 @@ This tool offers comprehensive insights by calculating the total and median coun
 ### Clone the Repository
 
 ```
-git clone [https://github.com/akintunero/network-config-checker.git](https://github.com/nanya01/github_repository_statistics.git)
+git clone https://github.com/nanya01/github_repository_statistics.git
 ```
 
 Create a Virtual Environment (Recommended)
