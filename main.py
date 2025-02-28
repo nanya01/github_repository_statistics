@@ -53,8 +53,10 @@ def get_user_repos(username):
     get_code_lines_per_language(pdf,repos,username)
     pdf.output("github_stats.pdf")
 
-
-
+ '''
+  TODO: Refactor  the methods that are similar like commits, releases, total branch, closed issues
+        total contributors, environments into one method and call it dynamically, but was left for explanation 
+'''
 def get_total_forks(pdf, repos):
     data = "forks"
     total_forks = 0
@@ -97,7 +99,7 @@ def get_total_commits(pdf, repos, username):
         page = 1
         
         while True:
-            url = f"{BASE_URL}/repos/{username}/{repo['name']}/commits?per_page=30&page={page}"
+            url = f"{BASE_URL}/repos/{username}/{repo['name']}/commits?per_page=100&page={page}"
             response = requests.get(url, headers=getHeaders())
 
             if response.status_code != 200:
